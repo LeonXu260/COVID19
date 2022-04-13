@@ -19,7 +19,7 @@ If you spot any issue in this application or want to see a certain features in t
 This is the Vue 2 version of the COVID19 application. Currently, the Vue 3 version of the COVID19 version is being developed.
 
 ## Authors and acknowledgment
-- [Leon Xu](https://gitlab.com/leonxu260)
+- [Leon Xu](https://github.com/leonxu260)
 
 ## License
 For open source projects, say how it is licensed.
