@@ -14,13 +14,13 @@ const api = {
     });
   },
   getChinaData(params, params1) {
-    return axios.get(base.baseUrl + base.chinaData, {
+    return axios.get(base.proxy + base.baseUrl + base.chinaData, {
       params,
       params1,
     });
   },
   getWorldData(params, params1) {
-    return axios.get(base.baseUrl + base.worldData, {
+    return axios.get(base.proxy + base.baseUrl + base.worldData, {
       params,
       params1,
     });
@@ -33,16 +33,16 @@ const api = {
     );
     let canshu =
       "format=json&appid=6938&city_name=" + city_name + "&sign=" + rules;
-    return axios.get(base.baseUrl + base.cityData + "?" + canshu);
+    return axios.get(base.proxy + base.baseUrl + base.cityData + "?" + canshu);
   },
   getAllData(params, params1) {
-    return axios.get(base.baseUrl + base.allData, {
+    return axios.get(base.proxy + base.baseUrl + base.allData, {
       params,
       params1,
     });
   },
   getSwiperBanner() {
-    return axios.get(base.swiperBanner);
+    return axios.get(base.proxy + base.swiperBanner);
   },
   getTravel(params) {
     return axios.get(base.travelUrl + base.travelData, {

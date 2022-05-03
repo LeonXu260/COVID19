@@ -16,6 +16,7 @@ const base = {
   travelQuery: "/query",
   CityUrl: "https://bang.360.cn",
   getCity: "/aj/getcitycode",
+  proxy: "https://calm-springs-86046.herokuapp.com/",
 };
 
 export default base;
