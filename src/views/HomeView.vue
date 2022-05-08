@@ -45,29 +45,25 @@ export default {
     };
   },
   created() {
-    api
-      .getCovInfo({
-        key: process.env.VUE_APP_TIANAPI_KEY,
-      })
-      .then((res) => {
-        let data = res.data.newslist[0].desc;
-        this.covNews = res.data.newslist[0].news;
-        this.covData = {
-          currentConfirmedCount: data.currentConfirmedCount,
-          currentConfirmedIncr: data.currentConfirmedIncr,
-          confirmedCount: data.confirmedCount,
-          confirmedIncr: data.confirmedIncr,
-          suspectedCount: data.suspectedCount,
-          suspectedIncr: data.suspectedIncr,
-          curedCount: data.curedCount,
-          curedIncr: data.curedIncr,
-          deadCount: data.deadCount,
-          deadIncr: data.deadIncr,
-          seriousCount: data.seriousCount,
-          seriousIncr: data.seriousIncr,
-          modifyTime: data.modifyTime,
-        };
-      });
+    api.getCovInfo().then((res) => {
+      let data = res.data[0].newslist[0].desc;
+      this.covNews = res.data[0].newslist[0].news;
+      this.covData = {
+        currentConfirmedCount: data.currentConfirmedCount,
+        currentConfirmedIncr: data.currentConfirmedIncr,
+        confirmedCount: data.confirmedCount,
+        confirmedIncr: data.confirmedIncr,
+        suspectedCount: data.suspectedCount,
+        suspectedIncr: data.suspectedIncr,
+        curedCount: data.curedCount,
+        curedIncr: data.curedIncr,
+        deadCount: data.deadCount,
+        deadIncr: data.deadIncr,
+        seriousCount: data.seriousCount,
+        seriousIncr: data.seriousIncr,
+        modifyTime: data.modifyTime,
+      };
+    });
   },
 };
 </script>
