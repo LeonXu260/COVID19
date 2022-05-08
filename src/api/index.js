@@ -8,10 +8,8 @@ import base from "./base";
 import md5 from "md5-js";
 
 const api = {
-  getCovInfo(params) {
-    return axios.get(base.host + base.covInfo, {
-      params,
-    });
+  getCovInfo() {
+    return axios.get(base.host + base.covInfo);
   },
   getChinaData(params, params1) {
     return axios.get(base.baseUrl + base.chinaData, {
