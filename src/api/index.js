@@ -14,13 +14,13 @@ const api = {
     });
   },
   getChinaData(params, params1) {
-    return axios.get(base.proxy + base.baseUrl + base.chinaData, {
+    return axios.get(base.baseUrl + base.chinaData, {
       params,
       params1,
     });
   },
   getWorldData(params, params1) {
-    return axios.get(base.proxy + base.baseUrl + base.worldData, {
+    return axios.get(base.baseUrl + base.worldData, {
       params,
       params1,
     });
