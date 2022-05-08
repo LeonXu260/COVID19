@@ -4,6 +4,7 @@
 
 const base = {
   host: "https://covid-19-api-server.herokuapp.com",
+  baseUrl: "https://yupn.api.storeapi.net",
   covInfo: "/api",
   chinaData: "/api/china",
   worldData: "/api/world",
