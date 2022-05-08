@@ -9,7 +9,7 @@ const base = {
   worldData: "/api/world",
   cityData: "/api/94/221",
   allData: "/api/94/222?format=json",
-  swiperBanner: "https://iwenwiki.com/wapicovid19/ncovimg.php",
+  swiperBanner: "/api/image",
   travelUrl: "https://apis.juhe.cn/springTravel",
   travelData: "/citys",
   travelQuery: "/query",
