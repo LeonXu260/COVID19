@@ -11,17 +11,11 @@ const api = {
   getCovInfo() {
     return axios.get(base.host + base.covInfo);
   },
-  getChinaData(params, params1) {
-    return axios.get(base.baseUrl + base.chinaData, {
-      params,
-      params1,
-    });
+  getChinaData() {
+    return axios.get(base.host + base.chinaData);
   },
-  getWorldData(params, params1) {
-    return axios.get(base.baseUrl + base.worldData, {
-      params,
-      params1,
-    });
+  getWorldData() {
+    return axios.get(base.host + base.worldData);
   },
   getCityData(city_name) {
     let rules = md5(
