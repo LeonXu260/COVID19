@@ -5,8 +5,8 @@
 const base = {
   host: "https://covid-19-api-server.herokuapp.com",
   covInfo: "/api",
-  chinaData: "/api/94/219?format=json",
-  worldData: "/api/94/220?format=json",
+  chinaData: "/api/china",
+  worldData: "/api/world",
   cityData: "/api/94/221",
   allData: "/api/94/222?format=json",
   swiperBanner: "https://iwenwiki.com/wapicovid19/ncovimg.php",
