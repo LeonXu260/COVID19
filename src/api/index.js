@@ -25,7 +25,7 @@ const api = {
     );
     let canshu =
       "format=json&appid=6938&city_name=" + city_name + "&sign=" + rules;
-    return axios.get(base.proxy + base.baseUrl + base.cityData + "?" + canshu);
+    return axios.get(base.baseUrl + base.cityData + "?" + canshu);
   },
   getAllData(params, params1) {
     return axios.get(base.proxy + base.baseUrl + base.allData, {
