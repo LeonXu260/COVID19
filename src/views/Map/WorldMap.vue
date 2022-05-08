@@ -11,26 +11,21 @@ import api from "../../api/index";
 export default {
   name: "WorldMap",
   mounted() {
-    api
-      .getWorldData({
-        appid: process.env.VUE_APP_WADATA_APPID,
-        sign: process.env.VUE_APP_WADATA_SIGN,
-      })
-      .then((res) => {
-        let worlds = res.data.retdata;
-        if (!worlds) {
-          this.$myChart.worldMap("main", []);
-          return;
-        }
-        let arr = [];
-        for (let i = 0; i < worlds.length; i++) {
-          let obj = {};
-          obj.name = worlds[i].xArea;
-          obj.value = worlds[i].confirm;
-          arr.push(obj);
-        }
-        this.$myChart.worldMap("main", arr);
-      });
+    api.getWorldData().then((res) => {
+      let worlds = res.data[0].retdata;
+      if (!worlds) {
+        this.$myChart.worldMap("main", []);
+        return;
+      }
+      let arr = [];
+      for (let i = 0; i < worlds.length; i++) {
+        let obj = {};
+        obj.name = worlds[i].xArea;
+        obj.value = worlds[i].confirm;
+        arr.push(obj);
+      }
+      this.$myChart.worldMap("main", arr);
+    });
   },
 };
 </script>
