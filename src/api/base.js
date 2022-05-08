@@ -3,9 +3,9 @@
  */
 
 const base = {
-  host: "https://api.tianapi.com",
+  host: "https://covid-19-api-server",
   baseUrl: "https://yupn.api.storeapi.net",
-  covInfo: "/ncov/index",
+  covInfo: "/api",
   chinaData: "/api/94/219?format=json",
   worldData: "/api/94/220?format=json",
   cityData: "/api/94/221",
