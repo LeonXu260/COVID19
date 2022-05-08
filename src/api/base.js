@@ -3,7 +3,7 @@
  */
 
 const base = {
-  host: "https://covid-19-api-server",
+  host: "https://covid-19-api-server.herokuapp.com",
   covInfo: "/api",
   chinaData: "/api/94/219?format=json",
   worldData: "/api/94/220?format=json",
