@@ -24,34 +24,29 @@ export default {
     };
   },
   mounted() {
-    api
-      .getChinaData({
-        appid: process.env.VUE_APP_WADATA_APPID,
-        sign: process.env.VUE_APP_WADATA_SIGN,
-      })
-      .then((res) => {
-        let cities = res.data.retdata;
-        if (!cities) {
-          this.$myChart.chinaMap("nowMain", []);
-          return;
-        }
-        let arr = [];
-        let nowArr = [];
-        for (let i = 0; i < cities.length; i++) {
-          let obj = {};
-          obj.name = cities[i].xArea;
-          obj.value = cities[i].confirm;
-          let now = {};
-          now.name = cities[i].xArea;
-          now.value = cities[i].curConfirm;
-          arr.push(obj);
-          nowArr.push(now);
-        }
-        this.arr = arr;
-        this.$nextTick(() => {
-          this.$myChart.chinaMap("nowMain", nowArr);
-        });
+    api.getChinaData().then((res) => {
+      let cities = res.data[0].retdata;
+      if (!cities) {
+        this.$myChart.chinaMap("nowMain", []);
+        return;
+      }
+      let arr = [];
+      let nowArr = [];
+      for (let i = 0; i < cities.length; i++) {
+        let obj = {};
+        obj.name = cities[i].xArea;
+        obj.value = cities[i].confirm;
+        let now = {};
+        now.name = cities[i].xArea;
+        now.value = cities[i].curConfirm;
+        arr.push(obj);
+        nowArr.push(now);
+      }
+      this.arr = arr;
+      this.$nextTick(() => {
+        this.$myChart.chinaMap("nowMain", nowArr);
       });
+    });
   },
   methods: {
     change(title) {
