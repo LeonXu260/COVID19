@@ -46,7 +46,7 @@ export default {
   },
   created() {
     api.getCovInfo().then((res) => {
-      let data = res.data[0].newslist[0].desc;
+      let data = res.data[0].newslist[0].desc[0];
       this.covNews = res.data[0].newslist[0].news;
       this.covData = {
         currentConfirmedCount: data.currentConfirmedCount,
