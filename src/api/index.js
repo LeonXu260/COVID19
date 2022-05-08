@@ -34,7 +34,7 @@ const api = {
     });
   },
   getSwiperBanner() {
-    return axios.get(base.proxy + base.swiperBanner);
+    return axios.get(base.host + base.swiperBanner);
   },
   getTravel(params) {
     return axios.get(base.travelUrl + base.travelData, {
